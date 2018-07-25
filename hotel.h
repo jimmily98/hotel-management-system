@@ -4,23 +4,17 @@
 #include<QVector>
 //hotels{hotel{hotel_oneday}}
 
-class Hotel_OneDay{
+class room{
 private:
-  int m_HotelId;
+  int m_RoomId;
   int m_RoomNum;
-  QVector<QString>m_RoomType;
-  QVector<int> m_RoomPrice;
-  QString m_Name;
-  QString m_Star;
-  QString m_Description;
-  QString m_Remark;
+  QString m_RoomType;
   QString m_Facilities={
   
   }
-  QVector<bool>Has_Facilities;
-  QString m_Category;
-  QVector<QString>m_Requirements;
+  QVector<bool>Has_Facilities;//是否上述的设施
 public:
+  Room();
 //get类接口
 
 
@@ -33,4 +27,35 @@ public:
 
 
 };
+
+class Hotel{
+private:
+  QString m_HotelId;
+  QString m_Name;
+  QString m_Star;
+  QString m_Category;
+  QVector<Room> m_Rooms;
+  QVector<int> m_RoomPrice;
+  QString m_RoomDescription;
+  QString m_Remark;
+  QVector<QString>m_Requirements;
+public:
+  Hotel();
+  //get类函数
+  
+  
+  //set类函数
+  
+  
+};
 #endif
+
+class Hotels{
+private:
+  QVector<Hotel> m_Hotels;
+  
+public:
+  
+  
+  
+};
